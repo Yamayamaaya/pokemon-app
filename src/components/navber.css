@@ -1,0 +1,9 @@
+nav {
+  background-color: aquamarine;
+  color: #0e0e0e;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

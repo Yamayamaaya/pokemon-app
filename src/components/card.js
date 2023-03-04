@@ -9,9 +9,9 @@ const Card = ({ pokemon }) => {
       <h3 className="cardName">{pokemon.name}</h3>
       <div className="cardType">
         <div>タイプ</div>
-        {pokemon.types.map((type) => {
+        {pokemon.types.map((type, i) => {
           return (
-            <div>
+            <div key={i}>
               <span className="typeName">{type.type.name}</span>
             </div>
           );
@@ -33,8 +33,8 @@ const Card = ({ pokemon }) => {
         <div className="cardData">
           <div className="能力">
             <p>能力</p>
-            {pokemon.abilities.map((ability) => {
-              return <p>{ability.is_hidden || ability.ability.name}</p>;
+            {pokemon.abilities.map((ability, i) => {
+              return <p key={i}>{ability.is_hidden || ability.ability.name}</p>;
             })}
           </div>
         </div>
